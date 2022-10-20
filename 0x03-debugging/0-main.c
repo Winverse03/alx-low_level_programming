@@ -5,12 +5,6 @@
  * Return: 0
  */
 
-#include "main.h"
-
-/**
- * main - main tests positive or negative
- * Return: 0
- */
 int main(void)
 {
 	int i;
