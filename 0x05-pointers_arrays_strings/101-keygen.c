@@ -15,7 +15,7 @@ int main(void)
 	int i, sum, n;
 
 	sum = 0;
-	rand(time(NULL));
+	srand(time(NULL));
 	for (i = 0; i < 100; i++)
 	{
 		pass[i] = rand() % 78;
