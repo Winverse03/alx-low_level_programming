@@ -2,26 +2,26 @@
 
 /**
  * leet - encodes a string in 1337
- * @s: string to be encoded
+ * @stri: string to be encoded
  * Return: the resulting string;
  */
 
-char *leet(char *s)
+char *leet(char *stri)
 {
-
+	
 	int i, j;
+	char a1[] = "aAeEoOtTlL";
+	char b1[] = "4433007711";
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; stri[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (s[i] == a[j])
+			if (stri[i] == a1[j])
 			{
-				s[i] = b[j];
+				stri[i] = b1[j];
 			}
 		}
 	}
-	return (s);
+	return (stri);
 }
