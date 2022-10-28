@@ -15,13 +15,21 @@ char *cap_string(char *stri)
 	{
 		while (!(stri[i] >= 'a' && stri[i] <= 'z'))
 			i++;
-		if (stri[i - 1] == ' ' || stri[i -1] == '\t' ||
-		stri[i -1] == '\n' || stri[i -1] == ',' ||
-		stri[i -1] == ';' || stri[i -1] == '.' ||
-		stri[i -1] == '!' || stri[i -1] == '?' ||
-		stri[i -1] == '"' || stri[i -1] == '(' ||
-		stri[i -1] == ')' || stri[i -1] == '{' ||
-		stri[i -1] == '}' i == 0)
+
+		if (stri[i - 1] == ' ' ||
+			       stri[i -1] == '\t' ||
+			       stri[i -1] == '\n' ||
+			       stri[i -1] == ',' ||
+			       stri[i -1] == ';' ||
+			       stri[i -1] == '.' ||
+			       stri[i -1] == '!' ||
+			       stri[i -1] == '?' ||
+			       stri[i -1] == '"' ||
+			       stri[i -1] == '(' ||
+			       stri[i -1] == ')' ||
+			       stri[i -1] == '{' ||
+			       stri[i -1] == '}'
+			       i == 0)
 			stri[i] -= 32;
 		i++;
 	}
