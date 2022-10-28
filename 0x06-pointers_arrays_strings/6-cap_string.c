@@ -31,5 +31,5 @@ char *cap_string(char *stri)
 			stri[i] -= 32;
 		i++;
 	}
-	return(stri);
+	return (stri);
 }
