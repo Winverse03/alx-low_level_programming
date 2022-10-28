@@ -2,30 +2,28 @@
 
 /**
  * cap_string - capitalizes everey word of a string
- * @s: string to modify
+ * @stri: string to modify
  * Return: the resulting string
  */
 
-char *cap_string(char *s)
+char *cap_string(char *stri)
 {
 
-	int i, j;
+	int i = 0;
 
-	char spe[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	for (i = 0; s[i] != '\0'; i++)
+	while (stri[i])
 	{
-		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
-		for (j = 0; j < 13; j++)
-		{
-			if (s[i] == spe[j])
-			{
-				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-				{
-					s[i + 1] -= 32;
-				}
-			}
-		}
+		while (!(stri[i] >= 'a' && stri[i] <= 'z'))
+			i++;
+		if (stri[i - 1] == ' ' || stri[i -1] == '\t' ||
+		stri[i -1] == '\n' || stri[i -1] == ',' ||
+		stri[i -1] == ';' || stri[i -1] == '.' ||
+		stri[i -1] == '!' || stri[i -1] == '?' ||
+		stri[i -1] == '"' || stri[i -1] == '(' ||
+		stri[i -1] == ')' || stri[i -1] == '{' ||
+		stri[i -1] == '}' i == 0)
+			stri[i] -= 32;
+		i++;
 	}
-	return (s);
+	return(stri);
 }
