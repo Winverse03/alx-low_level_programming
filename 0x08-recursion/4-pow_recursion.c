@@ -7,8 +7,9 @@
  * Return: the power of integer x,or -1 if less than 0
  */
 
-int _pow_recursion(int x, int y);
+int _pow_recursion(int x, int y)
 {
+
 	if (y < 0)
 	{
 		return (-1);
