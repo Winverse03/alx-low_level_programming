@@ -16,13 +16,10 @@ struct dog
 	float age;
 	char *owner;
 };
-int main(void)
-{
-	struct dog dog;
 
-	dog.name = "Bingo"
-	dog.age = "3 months"
-	dog.owner = "Paul"
-	return (0);
-}
+void init_dog(struct dog *n, char *name, float age, char *owner);
+void print_dog(struct dog *n);
+typedef struct dog dog_g;
+void free_dog(dog_g *n);
+dog_g *new_dog(char *name, float age, char *owner);
 #endif
