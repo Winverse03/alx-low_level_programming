@@ -19,9 +19,10 @@ struct dog
 int main(void)
 {
 	struct dog dog;
+
 	dog.name = "Bingo"
-		dog.age = "3 months"
-		dog.owner = "Paul"
-		retrun (0);
+	dog.age = "3 months"
+	dog.owner = "Paul"
+	return (0);
 }
 #endif
