@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- * int_index -  returns the index of the first element 
+ * int_index -  returns the index of the first element
  * for which the cmp function does not return 0
  * @array: array check.
  * @size: number of elements in the array.
