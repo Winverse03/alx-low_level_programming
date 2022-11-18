@@ -6,20 +6,23 @@
  * Return: Always 0.
  */
 
-int sum_them_all(const unsigned int n, ...)
+int main()
 {
-
-	va_list ap;
-	int x = 0;
-	unsigned int i;
-
-	if (n == 0)
+	int sum_them_all(const unsigned int n, ...)
 	{
-		return (0);
+
+		va_list figs;
+		int sum = 0;
+		unsigned int i;
+
+		if (n == 0)
+		{
+			return (0);
+		}
+		va_start(figs, n);
+		for (i = 0; i < n; i++)
+			sum += va_arg(figs, int);
+		va_end(figs);
+		return (sum);
 	}
-	va_start(ap, n);
-	for (i = 0; i < n; i++)
-		x += va_arg(ap, const unsigned int);
-	va_end(ap);
-	return (x);
 }
