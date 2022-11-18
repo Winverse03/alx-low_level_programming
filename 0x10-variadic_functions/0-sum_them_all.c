@@ -6,7 +6,7 @@
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 	int sum_them_all(const unsigned int n, ...)
 	{
